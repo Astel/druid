@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class UserController  {
     @Autowired
@@ -16,5 +18,10 @@ public class UserController  {
     @RequestMapping("/user/{id}")
     public User list(@PathVariable Long id) {
         return userService.findById(id);
+    }
+
+    @RequestMapping("/users")
+    public List<User> listUsers() {
+        return userService.findAll();
     }
 }

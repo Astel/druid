@@ -6,6 +6,9 @@ import com.alibaba.druid.spring.boot.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -14,6 +17,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findById(Long id) {
         return userDao.findOne(id);
+    }
+
+    @Override
+    public List<User> findAll() {
+        List<User> result = new ArrayList<User>();
+        userDao.findAll().forEach(result::add);
+        return result;
     }
 
 }

@@ -6,11 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author lihengming<89921218@qq.com>
  *
- * <p>一个简单的使用演示</p>
- * <p>1.按需配置application.properties，配置项请参考config-template.properties</p>
+ * <p>A simple demo</p>
+ * <p>1. Configure application.properties as needed, please refer to config-template.properties for configuration items</p>
  * <p>2.run DemoApplication</p>
- * <p>3.访问http://127.0.0.1:8080/druid</p>
- * <p>4.访问/user/${id}接口，查看SQL、Web、AOP监控效果，如：http://127.0.0.1:8080/user/1</p>
+ * <p>3. Visit http://127.0.0.1:8080/druid</p>
+ * <p>4. Visit the /user/${id} interface to view the SQL, Web, and AOP monitoring effects, such as: http://127.0.0.1:8080/user/1</p>
  *
  */
 @SpringBootApplication
